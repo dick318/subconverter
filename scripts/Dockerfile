@@ -2,7 +2,6 @@ FROM alpine:3.16
 ARG THREADS="4"
 ARG SHA=""
 
-# build minimized
 WORKDIR /
 RUN apk add --no-cache --virtual .build-tools git g++ build-base linux-headers cmake && \
     apk add --no-cache --virtual .build-deps curl-dev rapidjson-dev libevent-dev pcre2-dev yaml-cpp-dev && \
